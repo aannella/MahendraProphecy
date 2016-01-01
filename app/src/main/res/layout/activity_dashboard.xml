@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sadWhite"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".DASHBOARD">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="8dp"
+                android:src="@drawable/mp_logo"
+                android:scaleType="centerInside"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:text="MahendraProphecy.com"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <io.karim.MaterialTabs
+        android:id="@+id/mainTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        app:mtSameWeightTabs="true"
+        app:mtIndicatorColor="#FFFFFF"
+        app:mtIndicatorHeight="3dp"
+        app:mtMrlRippleColor="#FFFFFF"></io.karim.MaterialTabs>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainPager"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/sadWhite" />
+
+
+</LinearLayout>

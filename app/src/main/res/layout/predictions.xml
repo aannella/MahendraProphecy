@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="company.mahendraprophecy.WEBVIEW_FILES.STORY_VIEW">
+
+    <LinearLayout
+        android:id="@+id/predictions_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/orange"
+        android:elevation="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/predictions_back"
+            android:layout_width="38dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/predictions_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="Predictions"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/share_white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/predictions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"></WebView>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/predictions_progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            wheel:matProg_barColor="#FE9508"
+            wheel:matProg_progressIndeterminate="true" />
+    </RelativeLayout>
+
+</LinearLayout>

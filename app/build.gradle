@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "company.mahendraprophecy"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        maven {
+            url "https://repo.commonsware.com.s3.amazonaws.com"
+        }
+    }
+
+
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+
+    repositories {
+        maven { url "https://dl.bintray.com/florent37/maven" }
+        mavenCentral()
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    //image view shapes
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile('com.github.florent37:materialviewpager:1.1.1@aar') {
+        transitive = true
+    }
+    compile 'com.github.mrengineer13:snackbar:1.2.0'
+    //Material Tabs
+    compile 'io.karim:materialtabs:2.0.2'
+    compile 'it.neokree:MaterialTabs:0.11'
+    //Contact List Sticky Recycler View
+    compile 'com.tonicartos:superslim:0.4.13'
+    // Flat UI
+    compile 'com.github.eluleci:flatui:3.0.0'
+    // Navigation Drawer
+    compile('com.mikepenz.materialdrawer:library:2.9.2@aar') {
+        transitive = true
+    }
+    //youtube list
+    compile 'com.thefinestartist:ytpa:1.2.1'
+    //Material Spinner
+    compile('com.github.ganfra:material-spinner:1.1.0') {
+        exclude group: 'com.nineoldandroids', module: 'library'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    //flaoting menu & button
+    compile 'com.github.clans:fab:1.4.0'
+    //Confirm Dialog : https://android-arsenal.com/details/1/1907
+    compile 'com.github.vignesh-iopex:confirmdialog:1.0.1'
+    // Dotted Loading : https://android-arsenal.com/details/1/1743
+    compile 'com.github.d-max:spots-dialog:0.3@aar'
+    // Dialog Plus : https://android-arsenal.com/details/1/1413
+    compile 'com.orhanobut:dialogplus:1.10@aar'
+    // Nifty Dialogs
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+    //Material Dialog
+    compile 'me.drakeet.materialdialog:library:1.2.2'
+    // Yoyo anitmation library
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    // Dropable
+    compile 'com.github.chenupt.android:dragtoplayout:1.2.1@aar'
+    compile 'ru.noties:scrollable:1.1.2'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //DatePicker
+    compile('com.doomonafireball.betterpickers:library:1.5.5') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    //edittext
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    //joda time
+    compile files('libs/joda-time-2.3.jar')
+    // search view
+    compile 'com.github.leonardoxh:fake-search-view:0.3.1'
+    // Gallery Picker
+    compile 'com.github.darsh2:MultipleImageSelect:v0.0.3'
+    // Image Slider & Picasso
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    //Progress Bar
+    compile 'com.pnikosis:materialish-progress:1.7'
+    // Easy Preferences
+    compile 'ru.noties.simpleprefs:core:0.9.9'
+    //Staggered Grid
+    compile 'com.etsy.android.grid:library:1.0.5'
+    compile files('libs/gcm.jar')
+
+    //notification generator
+    compile 'com.github.halysongoncalves:pugnotification:1.8.1'
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.github.alexkolpa:floating-action-button-toolbar:0.5.1'
+}

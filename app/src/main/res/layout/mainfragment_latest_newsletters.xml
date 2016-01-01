@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sadWhite"
+    android:orientation="vertical"
+    tools:context="company.mahendraprophecy.MAIN_FRAGMENTS.MARKET_QUOTES">
+
+    <io.karim.MaterialTabs
+        android:id="@+id/subTabs"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:mtPaddingMiddle="false"
+        app:mtSameWeightTabs="true"
+        app:mtMrlRippleColor="#666666"
+        app:mtTextAllCaps="false"
+        android:background="@color/white"
+        android:elevation="20dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/subPager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

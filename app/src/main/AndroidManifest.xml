@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="company.mahendraprophecy" >
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="company.mahendraprophecy.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="technovators.mahendraprophecy.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_final"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.thefinestartist.ytpa.YouTubePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <!-- Need Your Google API Key -->
+        <meta-data
+            android:name="com.thefinestartist.ytpa.YouTubePlayerActivity.ApiKey"
+            android:value="AIzaSyCH8kFsg5Bh_L0n_WCBBolSgU_c36BPsRM" />
+
+        <activity
+            android:name="company.mahendraprophecy.OTHERS.DASHBOARD"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.ECONOMIC_CALENDAR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.SUBSCRIPTION_WEBVIEW"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.OTHERS.SERVICE_DETAILS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.REGISTER_LOGIN.REGISTER_LOGIN"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.OTHERS.SPLASH"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="company.mahendraprophecy.BOOKS.BOOKS"
+            android:label="@string/title_activity_books"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.BOOKS.BOOK_DETAILS"
+            android:label="@string/title_activity_book__details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.STORY_VIEW"
+            android:label="@string/title_activity_story__view"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.BEST_NINE"
+            android:label="@string/title_activity_about__us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.ABOUT_US"
+            android:label="@string/title_activity_about__us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.PREDICTIONS"
+            android:label="@string/title_activity_predictions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.PRIVACY"
+            android:label="@string/title_activity_privacy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.DISCLAIMER"
+            android:label="@string/title_activity_disclaimer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.AGREE_TERMS_CONDITIONS"
+            android:label="@string/title_activity_agree__terms__conditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.OTHERS.YOUTUBE_LIST"
+            android:label="@string/title_activity_youtube_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.PROFILE.PROFILE"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="company.mahendraprophecy.WEBVIEW_FILES.OFFERS"
+            android:label="@string/title_activity_offers"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="technovators.mahendraprophecy" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="company.mahendraprophecy.GCMIntentService" />
+
+        <activity
+            android:name="company.mahendraprophecy.MAINSCREEN"
+            android:label="@string/title_activity_mainscreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="company.mahendraprophecy.MARKET"
+            android:label="@string/title_activity_market"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="company.mahendraprophecy.NOTIFICATION"
+            android:label="@string/title_activity_book"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="company.mahendraprophecy.CONTACT"
+            android:label="@string/title_activity_contact"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="company.mahendraprophecy.SERVICE_SCREEN"
+            android:label="@string/title_activity_service__screen"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

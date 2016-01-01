@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="material_drawer_primary_icon">#FFFFFF</item>
+        <item name="material_drawer_selected">#FE9508</item>
+        <item name="material_drawer_selected_text">#FFFFFF</item>
+    </style>
+
+
+
+    <color name="colorPrimary">#80000000</color>
+    <color name="sadWhite">#FAFAFA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#FE9508</color>
+
+
+</resources>

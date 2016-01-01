@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sadWhite"
+    tools:context="company.mahendraprophecy.PROFILE.MY_PROFILE">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/edit_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                android:src="@drawable/edit_profile_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/profile_fname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="First Name"
+                        android:inputType="textPersonName"
+                        android:textColor="#80000000"
+                        android:textSize="18sp"
+                        app:met_baseColor="#666666"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="First Name"
+                        app:met_floatingLabelTextColor="#666666"
+                        app:met_primaryColor="#80000000"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColorHint="#80000000" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/profile_lname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Last Name"
+                        android:inputType="textPersonName"
+                        android:textColor="#80000000"
+                        android:textSize="18sp"
+                        app:met_baseColor="#666666"
+                        app:met_floatingLabel="highlight"
+                        app:met_floatingLabelText="Last Name"
+                        app:met_floatingLabelTextColor="#666666"
+                        app:met_primaryColor="#80000000"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColorHint="#80000000" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/profile_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:editable="false"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#80000000"
+                    android:textSize="18sp"
+                    app:met_baseColor="#666666"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="Email Address"
+                    app:met_floatingLabelTextColor="#666666"
+                    app:met_primaryColor="#80000000"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColorHint="#80000000" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/profile_mobile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:editable="false"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:textColor="#80000000"
+                    android:textSize="18sp"
+                    app:met_baseColor="#666666"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="Mobile Number"
+                    app:met_floatingLabelTextColor="#666666"
+                    app:met_primaryColor="#80000000"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColorHint="#80000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/profile_country_spinner"
+                    android:layout_width="match_parent"
+                    android:hint="Country"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/profile_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:editable="false"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="City"
+                    android:textColor="#80000000"
+                    android:textSize="18sp"
+                    app:met_baseColor="#666666"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="City"
+                    app:met_floatingLabelTextColor="#666666"
+                    app:met_primaryColor="#80000000"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColorHint="#80000000" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profile_update_button"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/orange"
+                android:elevation="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:text="UPDATE"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
